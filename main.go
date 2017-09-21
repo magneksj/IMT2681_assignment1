@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"os"
 	"strings"
 )
 
@@ -121,6 +122,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 // Initialize API server and handling
 func main() {
+	port := os.Getenv("PORT")
 	http.HandleFunc("/", handler)
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":"+port, nil)
 }

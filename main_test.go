@@ -110,5 +110,4 @@ func Test_getGithubInfo_fail(t *testing.T) {
 		t.Errorf("Expected StatusCode %d from %s, recieved %d", http.StatusNotFound, URL, resp.StatusCode)
 		return
 	}
-
 }

@@ -107,7 +107,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 	// Create and fill the response
 	resp := new(Response)
-	resp.Project = parts[3] + "/" + repo
+	resp.Project = parts[5]
 	resp.Owner = parts[4]
 	if contributors {
 		// The contributors are always sorted by commits in descending order
